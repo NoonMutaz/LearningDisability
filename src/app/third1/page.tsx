@@ -5,7 +5,7 @@ import './page.css';
 import { useState, useEffect } from 'react';
 import useSound from 'use-sound';
 import React from 'react';
-import { clearAll } from '../counter/page';
+// import { clearAll } from '../counter/page';
 // import First2  from '../first1/page';
 //  import { useState } from 'react';
  
@@ -85,7 +85,10 @@ function previous() {
     }
   };
 
-
+  const clearAll = () => {
+    localStorage.clear();
+    
+  };
 
   const handelClick3 = () => {
     if (!clicked) {

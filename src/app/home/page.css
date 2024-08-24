@@ -113,7 +113,7 @@ h1{
   }
   .btn{ 
     /* border-radius: 30px; */
-  align:center;
+  box-align:center;
   display: grid; place-items: center; 
   margin: 0 auto;
   display: block;

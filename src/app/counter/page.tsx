@@ -62,7 +62,7 @@
 
 // }
 
-export const clearAll = () => {
-    localStorage.clear();
-    // You can also add code to reset any other state variables or perform other actions
-  };
+// export const clearAll = () => {
+//     localStorage.clear();
+    
+//   };

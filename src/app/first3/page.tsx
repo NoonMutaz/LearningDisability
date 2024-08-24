@@ -1,7 +1,7 @@
  
  'use client';
  import './page.css'
- import { clearAll } from '../counter/page';
+//  import { clearAll } from '../counter/page';
  import React, { useEffect } from 'react';
 
  import { useState } from 'react';
@@ -39,6 +39,12 @@ const useLocalStorage = (key, initialValue) => {
   
     return [storedValue, setValue];
   };
+
+  const clearAll = () => {
+    localStorage.clear();
+    
+  };
+
     const [result, setResult] = useLocalStorage('result', 0);
     const [clickeddd, setClickeddd] = useLocalStorage('clickeddd', false);
     const [clickeddd2, setClickeddd2] = useLocalStorage('clickeddd2', false);

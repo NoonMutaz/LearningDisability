@@ -1,7 +1,7 @@
  
  'use client';
  import './page.css'
- import { clearAll } from '../counter/page';
+//  import { clearAll } from '../counter/page';
  import React, { useEffect } from 'react';
 
  import { useState } from 'react';
@@ -19,7 +19,10 @@ export default function F4(){
     function previous() {
         window.history.back()
     }
-
+    const clearAll = () => {
+      localStorage.clear();
+      
+    };
 //     
 ////////////////////////////////////////////////////////////////
 const useLocalStorage = (key, initialValue) => {

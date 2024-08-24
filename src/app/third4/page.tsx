@@ -1,7 +1,7 @@
  
  'use client';
  import './page.css'
- import { clearAll } from '../counter/page';
+//  import { clearAll } from '../counter/page';
  import React, { useEffect } from 'react';
 
  import { useState } from 'react';
@@ -65,6 +65,10 @@ const useLocalStorage = (key, initialValue) => {
       }
     };
   
+    const clearAll = () => {
+      localStorage.clear();
+      
+    };
   
   
     const handelClick3a = () => {
