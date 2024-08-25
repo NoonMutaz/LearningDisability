@@ -26,16 +26,25 @@ export default function F1(){
 //     // perform the action here
 //   }
 //  };
-// const handelClick2 = ()=>{
+const useLocalStorage = (key:string, initialValue:any) => {
+  const [storedValue, setStoredValue] = useState(initialValue);
 
-//   if (!clicked) {
-//     setClicked(true);
-    
-//       setButtonColor2(buttonColor2 === 'primary' ? 'secondary' : 'primary');
-   
-//     // perform the action here
-//   }
-//  };
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const value = localStorage.getItem(key);
+      if (value) {
+        setStoredValue(JSON.parse(value));
+      }
+    }
+  }, [key]);
+  const setValue = (value:any) => {
+    setStoredValue(value);
+    localStorage.setItem(key, JSON.stringify(value));
+  };
+
+  return [storedValue, setValue];
+};
+
 
 function previous() {
   useEffect(() => {
@@ -46,23 +55,7 @@ const clearAll = () => {
   localStorage.clear();
   
 };
-  const useLocalStorage = (key:string, initialValue:any) => {
-  const [storedValue, setStoredValue] = useState(initialValue);
-
-  useEffect(() => {
-    const value = localStorage.getItem(key);
-    if (value) {
-      setStoredValue(JSON.parse(value));
-    }
-  }, []);
-
-  const setValue = (value:any) => {
-    setStoredValue(value);
-    localStorage.setItem(key, JSON.stringify(value));
-  };
-
-  return [storedValue, setValue];
-};
+   
   const [result, setResult] = useLocalStorage('result', 0);
   const [clicked, setClicked] = useLocalStorage('clicked', false);
   const [clicked2, setClicked2] = useLocalStorage('clicked2', false);

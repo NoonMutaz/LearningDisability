@@ -12,6 +12,24 @@ import useSound from 'use-sound';
  
 export default function S2(){
 
+  const useLocalStorage = (key:string, initialValue:any) => {
+    const [storedValue, setStoredValue] = useState(initialValue);
+  
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        const value = localStorage.getItem(key);
+        if (value) {
+          setStoredValue(JSON.parse(value));
+        }
+      }
+    }, [key]);
+    const setValue = (value:any) => {
+      setStoredValue(value);
+      localStorage.setItem(key, JSON.stringify(value));
+    };
+  
+    return [storedValue, setValue];
+  };
 
 
     const router = useRouter()
@@ -22,23 +40,24 @@ export default function S2(){
 
 //     
 ////////////////////////////////////////////////////////////////
-const useLocalStorage = (key:any, initialValue:any) => {
-    const [storedValue, setStoredValue] = useState(initialValue);
+// const useLocalStorage = (key:any, initialValue:any) => {
+//     const [storedValue, setStoredValue] = useState(initialValue);
   
-    useEffect(() => {
-      const value = localStorage.getItem(key);
-      if (value) {
-        setStoredValue(JSON.parse(value));
-      }
-    }, []);
-
-    const setValue = (value:any) => {
-      setStoredValue(value);
-      localStorage.setItem(key, JSON.stringify(value));
-    };
+//     useEffect(() => {
+//       if (typeof window !== 'undefined') {
+//         const value = localStorage.getItem(key);
+//         if (value) {
+//           setStoredValue(JSON.parse(value));
+//         }
+//       }
+//     }, [key]);
+//     const setValue = (value:any) => {
+//       setStoredValue(value);
+//       localStorage.setItem(key, JSON.stringify(value));
+//     };
   
-    return [storedValue, setValue];
-  };
+//     return [storedValue, setValue];
+//   };
     const [result, setResult] = useLocalStorage('result', 0);
     const [clickedd, setClickedd] = useLocalStorage('clickedd', false);
     // const [clickedd2, setClickedd2] = useLocalStorage('clickedd2', false);
@@ -163,7 +182,7 @@ const useLocalStorage = (key:any, initialValue:any) => {
   <h3><button className='btn'  onClick={handelClickk3} style={{ backgroundColor: buttonColorr3 === 'primary' ? 'black' : 'red' }}>2</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/design20.png'  width="600" height="200"    className='img1'  ></img>
+  <img   src='./images/design20.png'  width="600" height="200"    className='img1'  alt='#'/> 
   <h3><button className='btn'  onClick={handelClickk} style={{ backgroundColor: buttonColorr === 'primary' ? 'black' : 'green' }}>1</button></h3>
   </div>
   <div className="column"  >

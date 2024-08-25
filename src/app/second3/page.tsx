@@ -12,6 +12,24 @@ import useSound from 'use-sound';
  
 export default function S3(){
 
+  const useLocalStorage = (key:string, initialValue:any) => {
+    const [storedValue, setStoredValue] = useState(initialValue);
+  
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        const value = localStorage.getItem(key);
+        if (value) {
+          setStoredValue(JSON.parse(value));
+        }
+      }
+    }, [key]);
+    const setValue = (value:any) => {
+      setStoredValue(value);
+      localStorage.setItem(key, JSON.stringify(value));
+    };
+  
+    return [storedValue, setValue];
+  };
 
 
     const router = useRouter()
@@ -25,23 +43,23 @@ export default function S3(){
     };
 //     
 ////////////////////////////////////////////////////////////////
-const useLocalStorage = (key:string, initialValue:any) => {
-    const [storedValue, setStoredValue] = useState(initialValue);
+// const useLocalStorage = (key:string, initialValue:any) => {
+//     const [storedValue, setStoredValue] = useState(initialValue);
   
-    useEffect(() => {
-      const value = localStorage.getItem(key);
-      if (value) {
-        setStoredValue(JSON.parse(value));
-      }
-    }, []);
+//     useEffect(() => {
+//       const value = localStorage.getItem(key);
+//       if (value) {
+//         setStoredValue(JSON.parse(value));
+//       }
+//     }, []);
   
-    const setValue = (value:any) => {
-      setStoredValue(value);
-      localStorage.setItem(key, JSON.stringify(value));
-    };
+//     const setValue = (value:any) => {
+//       setStoredValue(value);
+//       localStorage.setItem(key, JSON.stringify(value));
+//     };
   
-    return [storedValue, setValue];
-  };
+//     return [storedValue, setValue];
+//   };
     const [result, setResult] = useLocalStorage('result', 0);
     const [clickeddd4, setClickeddd4] = useLocalStorage('clickeddd4', false);
     const [click4, setClick4] = useLocalStorage('clickeddd4', false);
