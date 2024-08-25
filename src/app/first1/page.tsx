@@ -46,7 +46,7 @@ const clearAll = () => {
   localStorage.clear();
   
 };
-  const useLocalStorage = (key, initialValue) => {
+  const useLocalStorage = (key:string, initialValue:any) => {
   const [storedValue, setStoredValue] = useState(initialValue);
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const clearAll = () => {
     }
   }, []);
 
-  const setValue = (value) => {
+  const setValue = (value:any) => {
     setStoredValue(value);
     localStorage.setItem(key, JSON.stringify(value));
   };

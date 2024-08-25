@@ -22,7 +22,7 @@ export default function F2(){
 
 //     
 ////////////////////////////////////////////////////////////////
-const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key:string, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
   
     useEffect(() => {
@@ -37,7 +37,7 @@ const useLocalStorage = (key, initialValue) => {
       
     };
 
-    const setValue = (value) => {
+    const setValue = (value:any) => {
       setStoredValue(value);
       localStorage.setItem(key, JSON.stringify(value));
     };
@@ -93,7 +93,10 @@ const useLocalStorage = (key, initialValue) => {
       localStorage.clear();
       setClearStorage(true);
     };
-  
+    const clearAll = () => {
+      localStorage.clear();
+      
+    };
     useEffect(() => {
       if (clearStorage) {
         // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage

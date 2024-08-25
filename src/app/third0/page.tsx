@@ -1,7 +1,7 @@
  
  'use client';
  import './page.css'
- import { clearAll } from '../counter/page';
+//  import { clearAll } from '../counter/page';
  import React, { useEffect } from 'react';
 
  import { useState } from 'react';
@@ -22,7 +22,7 @@ export default function T0(){
 
 //     
 ////////////////////////////////////////////////////////////////
-const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key:any, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
   
     useEffect(() => {
@@ -31,8 +31,9 @@ const useLocalStorage = (key, initialValue) => {
         setStoredValue(JSON.parse(value));
       }
     }, []);
-  
-    const setValue = (value) => {
+    
+
+    const setValue = (value:any) => {
       setStoredValue(value);
       localStorage.setItem(key, JSON.stringify(value));
     };
@@ -65,7 +66,10 @@ const useLocalStorage = (key, initialValue) => {
       }
     };
   
-  
+    const clearAll = () => {
+      localStorage.clear();
+      
+    };
   
     const handelClickk3 = () => {
       if (!clickedd) {

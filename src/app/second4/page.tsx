@@ -22,7 +22,7 @@ export default function S4(){
 
 //     
 ////////////////////////////////////////////////////////////////
-const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key:string, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
   
     useEffect(() => {
@@ -31,12 +31,9 @@ const useLocalStorage = (key, initialValue) => {
         setStoredValue(JSON.parse(value));
       }
     }, []);
-    const clearAll = () => {
-      localStorage.clear();
-      
-    };
 
-    const setValue = (value) => {
+
+    const setValue = (value:any) => {
       setStoredValue(value);
       localStorage.setItem(key, JSON.stringify(value));
     };
@@ -69,7 +66,10 @@ const useLocalStorage = (key, initialValue) => {
       }
     };
   
-  
+    const clearAll = () => {
+      localStorage.clear();
+      
+    };
   
     // const handelClick3aa = () => {
     //   if (!clickeddd4a) {

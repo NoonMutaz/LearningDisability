@@ -22,7 +22,7 @@ export default function T3(){
 
 //     
 ////////////////////////////////////////////////////////////////
-const useLocalStorage = (key, initialValue) => {
+const useLocalStorage = (key:string, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
   
     useEffect(() => {
@@ -32,7 +32,7 @@ const useLocalStorage = (key, initialValue) => {
       }
     }, []);
   
-    const setValue = (value) => {
+    const setValue = (value:any) => {
       setStoredValue(value);
       localStorage.setItem(key, JSON.stringify(value));
     };

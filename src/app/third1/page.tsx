@@ -42,7 +42,7 @@ function previous() {
     window.history.back();
   }, []);
 }
-  const useLocalStorage = (key, initialValue) => {
+  const useLocalStorage = (key:any, initialValue:any) => {
   const [storedValue, setStoredValue] = useState(initialValue);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function previous() {
     }
   }, []);
 
-  const setValue = (value) => {
+  const setValue = (value:any) => {
     setStoredValue(value);
     localStorage.setItem(key, JSON.stringify(value));
   };
