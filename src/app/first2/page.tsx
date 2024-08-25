@@ -32,6 +32,14 @@ const useLocalStorage = (key:string, initialValue:any) => {
       }
     }, []);
   
+    if (typeof document !== 'undefined') {
+      
+      // Code that references the document object
+    } else {
+      console.warn('document is not defined. This code will only run in the browser.');
+    }
+
+    
     const clearAll = () => {
       localStorage.clear();
       
