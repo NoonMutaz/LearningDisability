@@ -11,21 +11,7 @@ import React from 'react';
  
 
 export default function F1(){
-  // const [result, setResult] = useLocalStorage('result', 0);
-  // const [clicked, setClicked] = useLocalStorage('clicked', false);
-  // const [clicked2, setClicked2] = useLocalStorage('clicked2', false);
-  // const [buttonColor, setButtonColor] = useLocalStorage('buttonColor', 'primary');
-  // const [buttonColor2, setButtonColor2] = useLocalStorage('buttonColor2', 'primary');
-//  const handelClick = ()=>{
 
-//   if (!clicked) {
-//     setClicked(true);
-//       setResult(result+1);
-//       setButtonColor(buttonColor === 'primary' ? 'secondary' : 'primary');
-   
-//     // perform the action here
-//   }
-//  };
 const useLocalStorage = (key:string, initialValue:any) => {
   const [storedValue, setStoredValue] = useState(initialValue);
 
@@ -44,6 +30,22 @@ const useLocalStorage = (key:string, initialValue:any) => {
 
   return [storedValue, setValue];
 };
+
+
+
+const [clearStorage, setClearStorage] = useState(false);
+
+const handleClearStorage = () => {
+  localStorage.clear();
+  setClearStorage(true);
+};
+
+useEffect(() => {
+  if (clearStorage) {
+    // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+    // router.push('/'); // Navigate to the homepage, for example
+  }
+}, [clearStorage]);
 
 
 function previous() {
@@ -98,20 +100,6 @@ const clearAll = () => {
       play11();
     }
   };
-
-  const [clearStorage, setClearStorage] = useState(false);
-
-  const handleClearStorage = () => {
-    localStorage.clear();
-    setClearStorage(true);
-  };
-
-  useEffect(() => {
-    if (clearStorage) {
-      // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
-      // router.push('/'); // Navigate to the homepage, for example
-    }
-  }, [clearStorage]);
 
   
 
@@ -180,7 +168,7 @@ const clearAll = () => {
    <br></br>  
 <div   className='cont'>
 
-   <img   src='./images/fruit.png'  width="600" height="200"    ></img>
+   <img   src='./images/fruit.png'  width="600" height="200" alt='image'   ></img>
 </div><br></br>
 <h3> التصنيف حسب اللون 
 صنف الاشكال التالية حسب لونها</h3>

@@ -8,7 +8,7 @@
  
 import { useRouter } from 'next/navigation';
 import useSound from 'use-sound';
-import { NextPage } from 'next';
+// import { NextPage } from 'next';
 import { useState, useRef, useEffect } from 'react';
  
 export default function F5(){
@@ -32,6 +32,23 @@ export default function F5(){
     return [storedValue, setValue];
   };
 
+
+  const [clearStorage, setClearStorage] = useState(false);
+
+  const handleClearStorage = () => {
+    localStorage.clear();
+    setClearStorage(true);
+  };
+
+  useEffect(() => {
+    if (clearStorage) {
+      // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+      // router.push('/'); // Navigate to the homepage, for example
+    }
+  }, [clearStorage]);
+
+    
+  
 
     const router = useRouter()
 
@@ -105,21 +122,8 @@ export default function F5(){
         play1a();
       }
     };
-  
-    const [clearStorage, setClearStorage] = useState(false);
-  
-    const handleClearStorage = () => {
-      localStorage.clear();
-      setClearStorage(true);
-    };
-  
-    useEffect(() => {
-      if (clearStorage) {
-        // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
-        // router.push('/'); // Navigate to the homepage, for example
-      }
-    }, [clearStorage]);
-  
+
+ 
     
   
     const button = document.getElementById('clear-button');

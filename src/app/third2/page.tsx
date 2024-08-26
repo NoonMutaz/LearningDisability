@@ -32,6 +32,20 @@ export default function T2(){
   };
 
 
+  const [clearStorage, setClearStorage] = useState(false);
+
+  const handleClearStorage = () => {
+    localStorage.clear();
+    setClearStorage(true);
+  };
+
+  useEffect(() => {
+    if (clearStorage) {
+      // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+      // router.push('/'); // Navigate to the homepage, for example
+    }
+  }, [clearStorage]);
+
 
     const router = useRouter()
 
@@ -104,20 +118,6 @@ export default function T2(){
         play2();
       }
     };
-  
-    const [clearStorage, setClearStorage] = useState(false);
-  
-    const handleClearStorage = () => {
-      localStorage.clear();
-      setClearStorage(true);
-    };
-  
-    useEffect(() => {
-      if (clearStorage) {
-        // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
-        // router.push('/'); // Navigate to the homepage, for example
-      }
-    }, [clearStorage]);
   
     
   

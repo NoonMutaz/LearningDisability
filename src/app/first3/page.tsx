@@ -12,7 +12,7 @@ import useSound from 'use-sound';
  
 export default function F3(){
 
-  
+
   const useLocalStorage = (key:string, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
   
@@ -31,6 +31,21 @@ export default function F3(){
   
     return [storedValue, setValue];
   };
+
+  
+  const [clearStorage, setClearStorage] = useState(false);
+
+  const handleClearStorage = () => {
+    localStorage.clear();
+    setClearStorage(true);
+  };
+
+  useEffect(() => {
+    if (clearStorage) {
+      // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+      // router.push('/'); // Navigate to the homepage, for example
+    }
+  }, [clearStorage]);
 
     const router = useRouter()
 
@@ -89,20 +104,7 @@ export default function F3(){
         playy1();
       }
     };
-  
-    const [clearStorage, setClearStorage] = useState(false);
-  
-    const handleClearStorage = () => {
-      localStorage.clear();
-      setClearStorage(true);
-    };
-  
-    useEffect(() => {
-      if (clearStorage) {
-        // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
-        // router.push('/'); // Navigate to the homepage, for example
-      }
-    }, [clearStorage]);
+   
   
     
   

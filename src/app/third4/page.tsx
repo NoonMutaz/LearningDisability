@@ -3,7 +3,7 @@
  import './page.css'
 //  import { clearAll } from '../counter/page';
  import React, { useEffect } from 'react';
-
+ import Image from 'next/image';
  import { useState } from 'react';
  
 import { useRouter } from 'next/navigation';
@@ -31,6 +31,20 @@ export default function F4(){
     return [storedValue, setValue];
   };
 
+
+  const [clearStorage, setClearStorage] = useState(false);
+
+  const handleClearStorage = () => {
+    localStorage.clear();
+    setClearStorage(true);
+  };
+
+  useEffect(() => {
+    if (clearStorage) {
+      // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+      // router.push('/'); // Navigate to the homepage, for example
+    }
+  }, [clearStorage]);
 
     const router = useRouter()
 
@@ -105,19 +119,7 @@ export default function F4(){
       }
     };
   
-    const [clearStorage, setClearStorage] = useState(false);
-  
-    const handleClearStorage = () => {
-      localStorage.clear();
-      setClearStorage(true);
-    };
-  
-    useEffect(() => {
-      if (clearStorage) {
-        // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
-        // router.push('/'); // Navigate to the homepage, for example
-      }
-    }, [clearStorage]);
+    
   
     
   
@@ -168,7 +170,7 @@ export default function F4(){
    <br></br>  
 <div   className='cont'>
 
-   <img   src='./images/penguins.png'  width="600" height="200"    ></img>
+   <img   src='./images/penguins.png'  width="600" height="200"    /> 
 </div><br></br> <br></br> <br></br>  <br></br> <br></br> 
 <h3>  
 قراءة وكتابة الاعداد ضمن العدد (20) (100) </h3>

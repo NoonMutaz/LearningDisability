@@ -32,6 +32,21 @@ export default function S5(){
   };
 
 
+  const [clearStorage, setClearStorage] = useState(false);
+
+  const handleClearStorage = () => {
+    localStorage.clear();
+    setClearStorage(true);
+  };
+
+  useEffect(() => {
+    if (clearStorage) {
+      // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+      // router.push('/'); // Navigate to the homepage, for example
+    }
+  }, [clearStorage]);
+
+
   // const useLocalStorage = (key:string, initialValue:any) => {
   //   const [storedValue, setStoredValue] = useState(initialValue);
   
@@ -122,18 +137,7 @@ export default function S5(){
       }
     };
   
-    const [clearStorage, setClearStorage] = useState(false);
-  
-    const handleClearStorage = () => {
-      localStorage.clear();
-      setClearStorage(true);
-    };
-  
-    useEffect(() => {
-      if (clearStorage) {
-       
-      }
-    }, [clearStorage]);
+    
   
     const clearAll = () => {
       localStorage.clear();
