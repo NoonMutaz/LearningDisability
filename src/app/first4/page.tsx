@@ -105,7 +105,11 @@ export default function F4(){
      
     
   
-    const button = document.getElementById('clear-button');
+    if (typeof document !== 'undefined') {
+      const button = document.getElementById('clear-button');
+  
+  
+  
     if (button) {
       button.addEventListener('click', () => {
         localStorage.clear();
@@ -115,7 +119,7 @@ export default function F4(){
         // or
         window.location.reload();
       });
-    }
+    }}
     const handleRestart = () => {
         clearAll();
         localStorage.clear();

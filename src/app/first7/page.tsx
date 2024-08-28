@@ -122,17 +122,21 @@ export default function F7(){
      
     
   
-    const button = document.getElementById('clear-button');
+    if (typeof document !== 'undefined') {
+      const button = document.getElementById('clear-button');
+  
+  
+  
     if (button) {
       button.addEventListener('click', () => {
         localStorage.clear();
         // restart logic for all files
         // you can also redirect to the first page or reload the app
-        window.location.href = './first1';
+        window.location.href = './home';
         // or
         window.location.reload();
       });
-    }
+    }}
     const handleRestart = () => {
         clearAll();
         localStorage.clear();

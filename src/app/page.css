@@ -1,0 +1,235 @@
+h1{
+    background-color: rgb(89, 124, 240);
+   }
+   .hello{
+    color: green
+   }
+  
+   body {font-family: Arial, Helvetica, sans-serif;
+   background-color: #0e0d0d;
+   background-image: linear-gradient(rgb(165, 301, 404), rgb(32, 12, 10));
+   
+  }
+  * {box-sizing: border-box;}
+  
+  .bg-img {
+    /* The image used */
+    background-image: url("https://i0.wp.com/kimillustration.com/wp-content/uploads/2021/09/SchoolofRock_Pages_08-09-copy-1-scaled.jpg?resize=1024%2C626&ssl=1");
+  
+    min-height: 550px;
+   
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Needed to position the navbar */
+    position: relative;
+  }
+  
+  /* Position the navbar container inside the image */
+  .container {
+    position: absolute;
+    margin: 20px;
+    width: auto;
+    
+    
+  }
+  
+  /* The navbar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px   3px 3px rgb(7, 7, 7);
+    cursor: pointer;
+  }
+  
+  /* Navbar links */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(112, 111, 111);
+  }
+  * {
+    box-sizing: border-box;
+    
+  }
+  
+   
+  
+  /* Center website */
+  .main {
+    max-width: 1000px;
+    margin: auto;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+  }
+  
+   
+  .row {
+    margin: 15px -19px;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .row,
+  .row > .column {
+    padding: 8px;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: right;
+    width: 25%;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+  }
+  
+  /* Clear floats after rows */ 
+  .row:after {
+    
+    display: table;
+    clear: both;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+  }
+  .btn{ 
+    /* border-radius: 30px; */
+  box-align:center;
+  display: grid; place-items: center; 
+  margin: 0 auto;
+  display: block;
+  
+  }
+  /* Content */
+  .content {
+    background-color: rgb(201, 198, 198); 
+    padding: 10px;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+    border-radius: 30px;
+  box-shadow: 0px   8px 3px rgb(61, 61, 61);
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 50px) {
+    .column {
+      width: 50%;
+      position: relative; /* or fixed, or absolute */
+      transition: none; /* remove any transitions that might be causing the issue */
+      cursor: default;
+      margin-bottom: 22px;
+      
+    }
+  }
+  img{
+    width: 220px;
+    height: 200px;
+    position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+    
+  }
+   
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 60px) {
+    .column {
+      width: 50%;
+      height: 50%;
+      position: relative; /* or fixed, or absolute */
+      transition: none; /* remove any transitions that might be causing the issue */
+      cursor: default;
+   
+    }
+  }
+  
+  div.content:hover {
+    border:   #030303;
+    background-color: rgb(241, 241, 241); 
+      position: relative; /* or fixed, or absolute */
+    transition: none; /* remove any transitions that might be causing the issue */
+    cursor: default;
+  }
+  
+  .style1{padding:6px}
+  .white{color:white}
+  /*  */
+   
+  .overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+  
+  .full-height {
+    height: 100%; /* or 100% if you want to set it to 100% of parent element */
+  }
+  
+  .full-height2 {
+    height: 0%; /* or 100% if you want to set it to 100% of parent element */
+  }

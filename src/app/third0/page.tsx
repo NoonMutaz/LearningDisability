@@ -102,7 +102,11 @@ const useLocalStorage = (key:any, initialValue:any) => {
   
     
   
-    const button = document.getElementById('clear-button');
+    if (typeof document !== 'undefined') {
+      const button = document.getElementById('clear-button');
+  
+  
+  
     if (button) {
       button.addEventListener('click', () => {
         localStorage.clear();
@@ -112,7 +116,7 @@ const useLocalStorage = (key:any, initialValue:any) => {
         // or
         window.location.reload();
       });
-    }
+    }}
     const handleRestart = () => {
         clearAll();
         localStorage.clear();
