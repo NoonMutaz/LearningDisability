@@ -415,13 +415,11 @@ const handleSubmit21 = (event: { preventDefault: () => void; }) => {
      
    <div className="bg-img">
  <div className="container">
-   <div className="topnav">
+   <button className="topnav"  type="submit">
  <a href=' /home'  >الجلسات</a> 
-     {/* <a href="#news"> </a> */}
-     {/* <a href="#contact">Contact</a> */}
-  
+
      <a  href='/about'  >عن البرنامج</a>
-   </div>
+   </button>
  </div>
 
 <div>
