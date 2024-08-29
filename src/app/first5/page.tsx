@@ -200,8 +200,8 @@ export default function F5(){
   </div>
 </div>
 
-<h3><button className='btn1' > <a  href='./first6'>التالي </a></button></h3>
-<h3><button className='btn2' ><a  href='./first4'>السابق</a></button></h3>
+<h3><a  href='./first11'><button className='btn1'  >التالي </button></a></h3>
+<h3><a  href='./first10'><button className='btn2' >السابق</button></a></h3>
 
 <br></br><br></br><br></br>
 <h3>{result}:النتيجة</h3>

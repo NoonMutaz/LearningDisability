@@ -90,7 +90,15 @@ h1{
   box-shadow: 0px   8px 3px rgb(61, 61, 61);
   }
   
-  
+  .right-corner-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #fff;  
+    border: 1px solid #ddd;  
+    color: #f70505;
+  }
   img{
     width: 320px;
     height: 300px;
@@ -100,12 +108,6 @@ h1{
     border-radius: 30px;
     /* border: 1px solid #ccc; */
   }
-  video{    width: 320px;
-    height: 300px;
-    position: relative; /* or fixed, or absolute */
-    transition: none; /* remove any transitions that might be causing the issue */
-    cursor: default;
-    border-radius: 30px;}
    
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
    
@@ -339,10 +341,13 @@ margin-right: 100px;
  }
 
  .btn:focus {
-  background-color: green; /* pressed color */
+  background-color: red; /* background color when focused */
+}
+ .btn:not(:focus) {
+  background-color: rgb(5, 5, 5); /* reset background color when not focused */
 }
 
-.btnr1{
+.btnr{
   float : center;
   align-items: center;
   text-align: center;
@@ -359,11 +364,7 @@ margin-right: 100px;
 font-size: 22 ;
  }
 
- .btnr1:focus {
-  background-color: #fc0202; /* pressed color */
-}
-
-.btnr2{
+ .btnw{
   float : center;
   align-items: center;
   text-align: center;
@@ -380,54 +381,27 @@ font-size: 22 ;
 font-size: 22 ;
  }
 
- .btnr2:focus {
-  background-color: #fc0202; /* pressed color */
+
+ .btnr:focus {
+  background-color: green; /* background color when focused */
 }
-.right-corner-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  background-color: #fff;  
-  border: 1px solid #ddd;  
-  color: #f70505;
-}
-.b1{ float : center;
-  align-items: center;
-  text-align: center;
-  display: grid; place-items: center; 
-  margin: 0 auto;
-  display: block;
-  height: 40px;
-  width: 190px;
-  border-radius: 30px; 
-  color:#f2f2f2;
-  background-color:rgb(243, 6, 6);
-  box-shadow: 0px   7px 11px rgb(61, 61, 61);
-  font-weight: bold;
-font-size: 22 ;}
- 
-.b1:hover{
-  color:#c7c4c4;
-  background-color: #0f0000;
+ .btnr:not(:focus) {
+  background-color: rgb(5, 5, 5); /* reset background color when not focused */
 }
 
-.b2{ float : center;
-  align-items: center;
-  text-align: center;
-  display: grid; place-items: center; 
-  margin: 0 auto;
-  display: block;
-  height: 40px;
-  width: 190px;
-  border-radius: 30px; 
-  color:#f2f2f2;
-  background-color:rgb(6, 207, 243);
-  box-shadow: 0px   7px 11px rgb(61, 61, 61);
-  font-weight: bold;
-font-size: 22 ;}
- 
-.b2:hover{
-  color:#c7c4c4;
-  background-color: #0f0000;
+.btnw:focus {
+  background-color: red; /* background color when focused */
+}
+ .btnw:not(:focus) {
+  background-color: rgb(5, 5, 5); /* reset background color when not focused */
+}
+
+.img1{
+  width: 220px;
+  height: 200px;
+  position: relative; /* or fixed, or absolute */
+  transition: none; /* remove any transitions that might be causing the issue */
+  cursor: default;
+  border-radius: 30px;
+  border: 1px solid #ccc;
 }

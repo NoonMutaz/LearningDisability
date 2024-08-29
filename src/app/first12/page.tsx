@@ -142,7 +142,8 @@ export default function F7(){
         localStorage.clear();
       // You can also add code to reset any other state variables or perform other actions
       window.dispatchEvent(new Event('clearAll'));
-      
+     
+        window.location.href = './first1'; // or window.location.reload();
       };
       const handleRestart2 = () => {
         clearAll();
@@ -150,16 +151,9 @@ export default function F7(){
       // You can also add code to reset any other state variables or perform other actions
       window.dispatchEvent(new Event('clearAll'));
      
-        window.location.href = './first8'; // or window.location.reload();
-      };
-      const handleRestart3 = () => {
-        clearAll();
-        localStorage.clear();
-      // You can also add code to reset any other state variables or perform other actions
-      window.dispatchEvent(new Event('clearAll'));
-     
         window.location.href = './first1'; // or window.location.reload();
       };
+
     function First7   (){
         const handleRestart = () => {
             clearAll();
@@ -226,7 +220,7 @@ export default function F7(){
 <br></br><br></br><br></br>
 <h3>{result}:النتيجة</h3>
 
-<h3><button className='b1' onClick={handleRestart3} >   اعادة المحاولة</button></h3>
+<h3><button className='b1' onClick={handleRestart} >   اعادة المحاولة</button></h3>
 <br></br>
 
 <h3><button className='b2' onClick={handleRestart2} >   تقييم الهدف</button></h3>

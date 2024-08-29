@@ -172,32 +172,32 @@ const clearAll = () => {
    <br></br>  
 <div   className='cont'>
 
-   <img   src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKO0EwK_6rbZSoGfzeaN_x1h6oAtprl_9Z3eirW7br1PoCCiZXuqi19pwKNyZTPl5k_RW7e3qRN5AVWNlDi0uL3ckyRmN0cTRzvpXAmc_MBje9fviYX_4GKTtnP0ZSBfcA8UB9H9i5qIs/s640/color+sort-page-0.jpg'  width="600" height="200" alt='image'   ></img>
+   <img   src=' ./images/ts.png  '  width="600" height="200" alt='image'   ></img>
 </div><br></br>
-<h3> التصنيف حسب اللون 
-صنف الاشكال التالية حسب لونها</h3>
+<h3> التصنيف حسب الشكل 
+         </h3>
  <br></br> <br></br>  
 <div className="row">
   <div className="column"  >
-  <img   src='./images/blueapple.jpeg'  width="600" height="200"    ></img>
+  <img   src='./images/wts.png'  width="600" height="200"    ></img>
   <h3><button className='btnw'   onClick={handelClick4} style={{ backgroundColor: buttonColor4 === 'primary' ? 'black' : 'red' }} >4</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/greenapple.jpeg'  width="600" height="200"    ></img>
+  <img   src='./images/syts.png'  width="600" height="200"    ></img>
   <h3><button className='btnw'   onClick={handelClick2} style={{ backgroundColor: buttonColor2 === 'primary' ? 'black' : 'red' }}>3</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/yellowapple.jpeg'  width="600" height="200"    ></img>
+  <img   src='./images/ts.png'  width="600" height="200"    ></img>
   <h3><button className='btnw'   onClick={handelClick} style={{ backgroundColor: buttonColor === 'primary' ? 'black' : 'green' }} >2</button></h3>
   
   </div>
   <div className="column"  >
-  <img   src='./images/redapple.jpeg'  width="600" height="200"    ></img>
+  <img   src='./images/rts.png'  width="600" height="200"    ></img>
 <h3><button className='btnw'   onClick={handelClick3} style={{ backgroundColor: buttonColor3 === 'primary' ? 'black' : 'red' }}>1</button></h3>
   </div>
 </div>
 
-<h3><button className='btn1'   > <a href='/first2'>التالي</a> </button></h3>
+<h3><a href='/first9'><button className='btn1'    >التالي </button></a></h3>
 {/* <h3><button className='btn2'  onClick={handleRestart}>السابق  </button></h3> */}
 
 <br></br><br></br><br></br>

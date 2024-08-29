@@ -180,7 +180,7 @@ export default function F4(){
   </div>
 </div>
 
-<h3><button className='btn1' > <a  href='./first5'> التالي  </a></button></h3>
+<h3><button className='btn1' > <a  href='./first6'> التالي  </a></button></h3>
 <h3><button className='btn2'  ><a  href='./first3'>السابق</a></button></h3>
 
 <br></br><br></br><br></br>

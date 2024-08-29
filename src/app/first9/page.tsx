@@ -10,7 +10,7 @@ import { useRouter } from 'next/navigation';
 import useSound from 'use-sound';
  
  
-export default function S4(){
+export default function F2(){
 
   const useLocalStorage = (key:string, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
@@ -31,7 +31,7 @@ export default function S4(){
     return [storedValue, setValue];
   };
 
-  
+
   const [clearStorage, setClearStorage] = useState(false);
 
   const handleClearStorage = () => {
@@ -45,7 +45,6 @@ export default function S4(){
       // router.push('/'); // Navigate to the homepage, for example
     }
   }, [clearStorage]);
-
 
     const router = useRouter()
 
@@ -63,64 +62,82 @@ export default function S4(){
 //       if (value) {
 //         setStoredValue(JSON.parse(value));
 //       }
-//     }, []);
-
-
-//     const setValue = (value:any) => {
-//       setStoredValue(value);
-//       localStorage.setItem(key, JSON.stringify(value));
-//     };
+//     }, [key]);
   
-//     return [storedValue, setValue];
-//   };
+    if (typeof document !== 'undefined') {
+      
+      // Code that references the document object
+    } else {
+      console.warn('document is not defined. This code will only run in the browser.');
+    }
+
+    
+    // const clearAll = () => {
+    //   localStorage.clear();
+      
+    // };
+
+  //   const setValue = (value:any) => {
+  //     setStoredValue(value);
+  //     localStorage.setItem(key, JSON.stringify(value));
+  //   };
+  
+  //   return [storedValue, setValue];
+  // };
     const [result, setResult] = useLocalStorage('result', 0);
-    const [clickeddd4aa, setClickeddd4aa] = useLocalStorage('clickeddd4aa', false);
-    // const [click4, setClick4] = useLocalStorage('clickeddd4', false);
-    const [buttonColoraa, setButtonColoraa] = useLocalStorage('buttonColoraa', 'primary');
-    const [buttonColor2aa, setButtonColor2aa] = useLocalStorage('buttonColor2aa', 'primary');
-    const [buttonColor3a, setButtonColor3a] = useLocalStorage('buttonColor3a', 'primary');
-    const [buttonColor4a, setButtonColor4a] = useLocalStorage('buttonColor4a', 'primary');
-    const [playa] = useSound(' ./sound/correct.mp3');
-    const [play1a] = useSound(' ./sound/wrong.mp3');
-    const handelClickaa= () => {
-      if (!clickeddd4aa) {
-        setClickeddd4aa(true);
+    const [clickedd, setClickedd] = useLocalStorage('clickedd', false);
+    // const [clickedd2, setClickedd2] = useLocalStorage('clickedd2', false);
+    const [buttonColorr, setButtonColorr] = useLocalStorage('buttonColorr', 'primary');
+    const [buttonColorr2, setButtonColorr2] = useLocalStorage('buttonColorr2', 'primary');
+    const [buttonColorr3, setButtonColorr3] = useLocalStorage('buttonColorr3', 'primary');
+    const [buttonColorr4, setButtonColorr4] = useLocalStorage('buttonColorr4', 'primary');
+    const [play1] = useSound(' ./sound/correct.mp3');
+    const [play2] = useSound(' ./sound/wrong.mp3');
+    const handelClickk= () => {
+      if (!clickedd) {
+        setClickedd(true);
         setResult(result + 1);
-        setButtonColoraa(buttonColoraa === 'primary' ? 'secondary' : 'primary');
-        playa();
+        setButtonColorr(buttonColorr === 'primary' ? 'secondary' : 'primary');
+        play1();
       }
     };
     
-    const handelClick2aa = () => {
-      if (!clickeddd4aa) {
-        setClickeddd4aa(true);
-        setButtonColor2aa(buttonColor2aa === 'primary' ? 'secondary' : 'primary');
-    play1a();
+    const handelClickk2 = () => {
+      if (!clickedd) {
+        setClickedd(true);
+        setButtonColorr2(buttonColorr2 === 'primary' ? 'secondary' : 'primary');
+    play2();
       }
     };
   
+  
+  
+    const handelClickk3 = () => {
+      if (!clickedd) {
+        setClickedd(true);
+        setButtonColorr3(buttonColorr3 === 'primary' ? 'secondary' : 'primary');
+        play2();
+      }
+    };
+    const handelClickk4 = () => {
+      if (!clickedd) {
+        setClickedd(true);
+        setButtonColorr4(buttonColorr4 === 'primary' ? 'secondary' : 'primary');
+        play2();
+      }
+    };
+  
+     
     const clearAll = () => {
       localStorage.clear();
       
     };
-  
-    // const handelClick3aa = () => {
-    //   if (!clickeddd4a) {
-    //     setClickeddd4a(true);
-    //     setButtonColor3a(buttonColoraa === 'primary' ? 'secondary' : 'primary');
-    //     play1a();
-    //   }
-    // };
-    // const handelClick4aa = () => {
-    //   if (!click4) {
-    //     setClick4(true);
-    //     setButtonColor4a(buttonColor4a === 'primary' ? 'secondary' : 'primary');
-    //     setResult(result + 1);
-    //     playa();
-    //   }
-    // };
-  
-    
+    useEffect(() => {
+      if (clearStorage) {
+        // Optional: You can also navigate to a specific page or perform some other action after clearing the local storage
+        // router.push('/'); // Navigate to the homepage, for example
+      }
+    }, [clearStorage]);
   
     
   
@@ -147,7 +164,7 @@ export default function S4(){
      
         window.location.href = './first'; // or window.location.reload();
       };
-    function Second4   (){
+    function First2   (){
         const handleRestart = () => {
             clearAll();
             // You can also add code to navigate to a specific page or perform other actions
@@ -162,7 +179,7 @@ export default function S4(){
      
    <div className="container">
      <div className="topnav">
-   <a href=' /home' onClick={handleRestart} >الجلسات</a> 
+   <a href=' /home'  onClick={handleRestart}>الجلسات</a> 
        {/* <a href="#news"> </a> */}
        {/* <a href="#contact">Contact</a> */}
     
@@ -175,32 +192,32 @@ export default function S4(){
    <br></br>  
 <div   className='cont'>
 
-   <img   src='./images/fishh.png'  width="600" height="200"   className='img1' ></img>
+   <img   src='./images/redshapes.png'  width="600" height="200"    ></img>
 </div><br></br>
-<h3>    
-تحديد انماط الاشياء   وتوسيعها وانشاؤها  </h3>
+<h3> التصنيف حسب اللون 
+صنف الاشكال التالية حسب لونها</h3>
  <br></br> <br></br>  
 <div className="row">
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
-  {/* <h3><button className='btn'  onClick={handelClick4a} style={{ backgroundColor: buttonColor4a === 'primary' ? 'black' : 'green' }}>4</button></h3> */}
+  <img   src='./images/sock.png'  width="600" height="200"    ></img>
+  <h3><button className='btn'  onClick={handelClickk4} style={{ backgroundColor: buttonColorr4 === 'primary' ? 'black' : 'red' }}>4</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/fish28.png'  width="600" height="200"   className='img1' ></img>
-  <h3><button className='btn'  onClick={handelClickaa} style={{ backgroundColor: buttonColoraa === 'primary' ? 'black' : 'green' }}>2</button></h3>
+  <img   src='./images/ts.png'  width="600" height="200"    ></img>
+  <h3><button className='btn'  onClick={handelClickk3} style={{ backgroundColor: buttonColorr3 === 'primary' ? 'black' : 'red' }}>3</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/fish29.png'  width="600" height="200"   className='img1' ></img>
-  <h3><button className='btn'  onClick={handelClick2aa} style={{ backgroundColor: buttonColor2aa === 'primary' ? 'black' : 'red' }}>1</button></h3>
+  <img   src='./images/cb.png'  width="600" height="200"    ></img>
+  <h3><button className='btn'  onClick={handelClickk2} style={{ backgroundColor: buttonColorr2 === 'primary' ? 'black' : 'red' }}>2</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
-{/* <h3><button className='btn'  onClick={handelClick3a} style={{ backgroundColor: buttonColor3a === 'primary' ? 'black' : 'red' }} >1</button></h3> */}
+  <img   src='./images/hat.png'  width="600" height="200"    ></img>
+<h3><button className='btn'  onClick={handelClickk}  style={{ backgroundColor: buttonColorr === 'primary' ? 'black' : 'green' }} >1</button></h3>
   </div>
 </div>
 
-<h3><a  href='./second5'> <button className='btn1' > التالي  </button></a></h3>
-<h3><a  href='./second3'><button className='btn2'  >السابق</button></a></h3>
+<h3><a  href='./first10'><button className='btn1'>التالي</button></a></h3>
+<h3><a  href='./first8'><button className='btn2'  > السابق</button></a></h3>
 
 <br></br><br></br><br></br>
 <h3>{result}:النتيجة</h3>
@@ -226,6 +243,6 @@ export default function S4(){
 
 )
 }
-return Second4()
+return First2()
  
 }

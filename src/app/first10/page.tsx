@@ -10,7 +10,9 @@ import { useRouter } from 'next/navigation';
 import useSound from 'use-sound';
  
  
-export default function S3(){
+export default function F3(){
+
+
   const useLocalStorage = (key:string, initialValue:any) => {
     const [storedValue, setStoredValue] = useState(initialValue);
   
@@ -45,26 +47,6 @@ export default function S3(){
     }
   }, [clearStorage]);
 
-  // const useLocalStorage = (key:string, initialValue:any) => {
-  //   const [storedValue, setStoredValue] = useState(initialValue);
-  
-  //   useEffect(() => {
-  //     if (typeof window !== 'undefined') {
-  //       const value = localStorage.getItem(key);
-  //       if (value) {
-  //         setStoredValue(JSON.parse(value));
-  //       }
-  //     }
-  //   }, [key]);
-  //   const setValue = (value:any) => {
-  //     setStoredValue(value);
-  //     localStorage.setItem(key, JSON.stringify(value));
-  //   };
-  
-  //   return [storedValue, setValue];
-  // };
-
-
     const router = useRouter()
 
     function previous() {
@@ -73,23 +55,13 @@ export default function S3(){
 
 //     
 ////////////////////////////////////////////////////////////////
-// const useLocalStorage = (key:any, initialValue:any) => {
-//     const [storedValue, setStoredValue] = useState(initialValue);
-  
-//     useEffect(() => {
-//       const value = localStorage.getItem(key);
-//       if (value) {
-//         setStoredValue(JSON.parse(value));
-//       }
-//     }, []);
-  
-//     const setValue = (value:any) => {
-//       setStoredValue(value);
-//       localStorage.setItem(key, JSON.stringify(value));
-//     };
-  
-//     return [storedValue, setValue];
-//   };
+
+
+  const clearAll = () => {
+    localStorage.clear();
+    
+  };
+
     const [result, setResult] = useLocalStorage('result', 0);
     const [clickeddd, setClickeddd] = useLocalStorage('clickeddd', false);
     const [clickeddd2, setClickeddd2] = useLocalStorage('clickeddd2', false);
@@ -116,10 +88,7 @@ export default function S3(){
       }
     };
   
-    const clearAll = () => {
-      localStorage.clear();
-      
-    };
+  
   
     const handelClickkk3 = () => {
       if (!clickeddd) {
@@ -135,8 +104,8 @@ export default function S3(){
         playy1();
       }
     };
+   
   
-    
     
   
     if (typeof document !== 'undefined') {
@@ -162,7 +131,7 @@ export default function S3(){
      
         window.location.href = './first'; // or window.location.reload();
       };
-    function Second2   (){
+    function First3   (){
         const handleRestart = () => {
             clearAll();
             // You can also add code to navigate to a specific page or perform other actions
@@ -177,7 +146,7 @@ export default function S3(){
      
    <div className="container">
      <div className="topnav">
-   <a href=' /home'  onClick={handleRestart}>الجلسات</a> 
+   <a href=' /home' onClick={handleRestart} >الجلسات</a> 
        {/* <a href="#news"> </a> */}
        {/* <a href="#contact">Contact</a> */}
     
@@ -190,33 +159,32 @@ export default function S3(){
    <br></br>  
 <div   className='cont'>
 
-   <img   src='./images/design21.png'  width="900" height="900"    ></img>
+   <img   src='./images/bsq.png'  width="600" height="200"    ></img>
 </div><br></br>
-<h3>    تحديد انماط الاشياء   وتوسيعها وانشاؤها </h3>
+<h3>  
+  التصنيف حسب الشكل واللون</h3>
  <br></br> <br></br>  
 <div className="row">
   <div className="column"  >
-  <img   src='./images/white.png'  width="800" height="300"    ></img>
-  {/* <h3><button className='btn'  onClick={handelClickk4} style={{ backgroundColor: buttonColorr4 === 'primary' ? 'black' : 'red' }}>4</button></h3> */}
+  <img   src='./images/gsq.png'  width="600" height="200"    ></img>
+  <h3><button className='btn'  onClick={handelClickkk4} style={{ backgroundColor: buttonColorrr4 === 'primary' ? 'black' : 'red' }}>4</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/design23.png'  width="600" height="200"   className='img1' ></img>
+  <img   src='./images/bsq.png'  width="600" height="200"    ></img>
+  <h3><button className='btn'  onClick={handelClickkk} style={{ backgroundColor: buttonColorrr === 'primary' ? 'black' : 'green' }}>3</button></h3>
+  </div>
+  <div className="column"  >
+  <img   src='./images/tryr.png'  width="600" height="200"    ></img>
   <h3><button className='btn'  onClick={handelClickkk2} style={{ backgroundColor: buttonColorrr2 === 'primary' ? 'black' : 'red' }}>2</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/design22.png'  width="600" height="200"   className='img1' ></img>
-  <h3><button className='btn'  onClick={handelClickkk} style={{ backgroundColor: buttonColorrr === 'primary' ? 'black' : 'green' }}>1</button></h3>
-  </div>
-  <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
-{/* <h3><button className='btn'  onClick={handelClickk}  style={{ backgroundColor: buttonColorr === 'primary' ? 'black' : 'green' }} >1</button></h3> */}
+  <img   src='./images/cb.png'  width="600" height="200"    ></img>
+<h3><button className='btn'  onClick={handelClickkk3} style={{ backgroundColor: buttonColorrr3 === 'primary' ? 'black' : 'red' }} >1</button></h3>
   </div>
 </div>
 
-<h3> <a  href='./second3'><button className='btn1'>
-التالي</button></a></h3>
-<h3><a  href='./second1'><button className='btn2'  >
-                السابق</button></a></h3>
+<h3><button className='btn1' >  <a  href='./first5'>التالي</a></button></h3>
+<h3><button className='btn2'  ><a  href='./first9'>السابق</a></button></h3>
 
 <br></br><br></br><br></br>
 <h3>{result}:النتيجة</h3>
@@ -242,6 +210,6 @@ export default function S3(){
 
 )
 }
-return Second2()
+return First3()
  
 }
