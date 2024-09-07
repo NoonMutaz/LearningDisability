@@ -387,3 +387,16 @@ font-size: 22 ;
  .btnw:not(:focus) {
   background-color: rgb(5, 5, 5); /* reset background color when not focused */
 }
+@media (prefers-color-scheme: dark) {
+  /* styles for dark mode */
+  body {
+    background-color: #333;
+  }
+}
+
+@media (inverted-colors) {
+  /* styles for smart invert */
+  body {
+    background-color: #444;
+  }
+}

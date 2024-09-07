@@ -196,7 +196,7 @@ export default function S3(){
  <br></br> <br></br>  
 <div className="row">
   <div className="column"  >
-  <img   src='./images/white.png'  width="800" height="300"    ></img>
+  {/* <img   src='./images/white.png'  width="800" height="300"    ></img> */}
   {/* <h3><button className='btn'  onClick={handelClickk4} style={{ backgroundColor: buttonColorr4 === 'primary' ? 'black' : 'red' }}>4</button></h3> */}
   </div>
   <div className="column"  >
@@ -208,7 +208,7 @@ export default function S3(){
   <h3><button className='btn'  onClick={handelClickkk} style={{ backgroundColor: buttonColorrr === 'primary' ? 'black' : 'green' }}>1</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
+  {/* <img   src='./images/white.png'  width="600" height="200"    ></img> */}
 {/* <h3><button className='btn'  onClick={handelClickk}  style={{ backgroundColor: buttonColorr === 'primary' ? 'black' : 'green' }} >1</button></h3> */}
   </div>
 </div>

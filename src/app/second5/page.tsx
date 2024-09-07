@@ -222,7 +222,7 @@ export default function S5(){
  <br></br> <br></br>  
 <div className="row">
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
+  {/* <img   src='./images/white.png'  width="600" height="200"    ></img> */}
   {/* <h3><button className='btn'  onClick={handelClick4b} style={{ backgroundColor: buttonColor4b === 'primary' ? 'black' : 'red' }}>4</button></h3> */}
   </div>
   <div className="column"  >
@@ -234,7 +234,7 @@ export default function S5(){
   <h3><button className='btn'  onClick={handelClickb} style={{ backgroundColor: buttonColorb === 'primary' ? 'black' : 'green' }}>1</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
+  {/* <img   src='./images/white.png'  width="600" height="200"    ></img> */}
 {/* <h3><button className='btn'  onClick={handelClickb} style={{ backgroundColor: buttonColorb === 'primary' ? 'black' : 'green' }} >1</button></h3> */}
   </div>
 </div>

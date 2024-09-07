@@ -178,11 +178,11 @@ export default function S4(){
    <img   src='./images/fishh.png'  width="600" height="200"   className='img1' ></img>
 </div><br></br>
 <h3>    
-تحديد انماط الاشياء   وتوسيعها وانشاؤها  </h3>
+تحديد أنماط الاشياء وتوسيعها وانشاؤها  </h3>
  <br></br> <br></br>  
 <div className="row">
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
+  {/* <img   src='./images/white.png'  width="600" height="200"    ></img> */}
   {/* <h3><button className='btn'  onClick={handelClick4a} style={{ backgroundColor: buttonColor4a === 'primary' ? 'black' : 'green' }}>4</button></h3> */}
   </div>
   <div className="column"  >
@@ -194,7 +194,7 @@ export default function S4(){
   <h3><button className='btn'  onClick={handelClick2aa} style={{ backgroundColor: buttonColor2aa === 'primary' ? 'black' : 'red' }}>1</button></h3>
   </div>
   <div className="column"  >
-  <img   src='./images/white.png'  width="600" height="200"    ></img>
+  {/* <img   src='./images/white.png'  width="600" height="200"    ></img> */}
 {/* <h3><button className='btn'  onClick={handelClick3a} style={{ backgroundColor: buttonColor3a === 'primary' ? 'black' : 'red' }} >1</button></h3> */}
   </div>
 </div>
